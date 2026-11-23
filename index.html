@@ -1,0 +1,1012 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Green Spice - Pure, natural and traditional spices for your kitchen.">
+
+<title>Green Spice | Freshness in Every Spice</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --green: #17652c;
+  --green-dark: #073d20;
+  --green-deep: #082f1d;
+  --green-light: #edf6e8;
+  --text: #202820;
+  --muted: #59635a;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 86px;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  color: var(--text);
+  background: #fff;
+  font-family: var(--sans);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-width {
+  width: min(100% - 8vw, 1440px);
+  margin-inline: auto;
+}
+
+/* HEADER */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(255,255,255,.97);
+  box-shadow: 0 2px 16px rgba(15,55,25,.06);
+}
+
+.header-inner {
+  min-height: 82px;
+  width: min(100% - 8vw, 1440px);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+/* RESPONSIVE LOGO */
+
+.brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+  min-width: 0;
+  max-width: 40%;
+}
+
+.brand img {
+  width: clamp(120px, 15vw, 220px);
+  height: auto;
+  max-height: 70px;
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+}
+
+.primary-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 4vw, 65px);
+}
+
+.nav-link {
+  position: relative;
+  padding: 12px 0;
+  color: #102d1a;
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 0;
+  height: 2px;
+  background: var(--green);
+  transition: width .25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  margin: 5px;
+  background: var(--green-dark);
+  transition: .25s;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  min-height: clamp(470px, 44vw, 660px);
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+  overflow: hidden;
+  background: #e8f0dc;
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: url(images/banner.png) center 48%/cover no-repeat;
+}
+
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,.98) 0%,
+    rgba(255,255,255,.92) 34%,
+    rgba(255,255,255,.42) 56%,
+    rgba(255,255,255,0) 78%
+  );
+}
+
+.hero-content {
+  padding-block: 76px 105px;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: var(--green);
+  font-size: .92rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+
+.hero h1 {
+  max-width: 720px;
+  margin: 0;
+  color: var(--green-deep);
+  font: 700 clamp(3.1rem, 7vw, 6.5rem)/.99 var(--serif);
+  letter-spacing: -.045em;
+}
+
+.hero-subtitle {
+  margin: 22px 0 26px;
+  color: #303a32;
+  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+  line-height: 1.55;
+}
+
+.button {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 0 25px;
+  border-radius: 999px;
+  font-size: .95rem;
+  font-weight: 700;
+  transition: transform .2s, background .2s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  color: #fff;
+  background: linear-gradient(100deg, #16812e, #064b24);
+}
+
+.button-primary:hover {
+  background: #063b1c;
+}
+
+.button span {
+  font-size: 1.2rem;
+}
+
+.hero-curve {
+  position: absolute;
+  bottom: -65px;
+  left: -5%;
+  width: 110%;
+  height: 110px;
+  border-radius: 50% 50% 0 0 / 50% 50% 0 0;
+  background: #fff;
+}
+
+/* COMMON SECTIONS */
+
+.section {
+  padding-block: clamp(62px, 8vw, 112px);
+}
+
+.about {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  align-items: center;
+  gap: clamp(38px, 8vw, 110px);
+}
+
+.section-kicker {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 16px;
+  color: var(--green);
+  font-size: .95rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+
+.section-kicker span {
+  width: 48px;
+  height: 1px;
+  background: #7cab75;
+}
+
+.about h2,
+.section-heading h2,
+.contact-content h2 {
+  margin: 0;
+  color: var(--green-deep);
+  font: 600 clamp(2.5rem, 4.4vw, 4.2rem)/1.08 var(--serif);
+}
+
+.body-copy {
+  max-width: 560px;
+  margin: 20px 0 26px;
+  color: #3f4941;
+  font-size: clamp(1rem, 1.25vw, 1.13rem);
+  line-height: 1.8;
+}
+
+.about-image-wrap {
+  position: relative;
+  min-width: 0;
+  padding: 0 0 0 10px;
+}
+
+.about-image-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -22px -18px -22px 8%;
+  z-index: -1;
+  border-radius: 34% 18% 30% 16%;
+  background: #edf6e8;
+  transform: rotate(3deg);
+}
+
+.about-image-wrap img {
+  width: 100%;
+  height: clamp(260px, 30vw, 430px);
+  object-fit: cover;
+  border-radius: 28px;
+}
+
+/* PRODUCTS AND GALLERY */
+
+.products {
+  padding-top: 28px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.section-heading .section-kicker {
+  justify-content: center;
+}
+
+.section-heading h2 {
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+}
+
+.section-heading > p:last-child {
+  margin: 12px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(12px, 1.8vw, 24px);
+}
+
+.product-card {
+  min-width: 0;
+  padding: 10px 10px 18px;
+  overflow: hidden;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #e5eae4;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(18,60,29,.05);
+  transition: transform .25s, box-shadow .25s;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(18,60,29,.12);
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1.05;
+  object-fit: cover;
+  border-radius: 12px;
+  background: var(--green-light);
+}
+
+.product-card h3 {
+  margin: 15px 4px 0;
+  color: var(--green-deep);
+  font: 600 clamp(1rem, 1.35vw, 1.25rem)/1.25 var(--serif);
+}
+
+/* CONTACT */
+
+.contact-section {
+  position: relative;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-block: 24px 64px;
+  padding: clamp(32px, 5vw, 65px);
+  border-radius: 30px;
+  background: linear-gradient(105deg, #f0f7e9, #e5f1dc);
+}
+
+.contact-content {
+  position: relative;
+  z-index: 1;
+  width: 65%;
+}
+
+.contact-kicker {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0 0 14px;
+  color: var(--green);
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+
+.contact-kicker span {
+  width: 48px;
+  height: 1px;
+  background: #77a86c;
+}
+
+.contact-content h2 {
+  max-width: 720px;
+  font-size: clamp(2rem, 3.3vw, 3.4rem);
+}
+
+.contact-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+  color: var(--green-dark);
+  font-size: clamp(1rem, 1.35vw, 1.2rem);
+  font-weight: 600;
+}
+
+.contact-list a,
+.contact-list p {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+}
+
+.contact-icon {
+  width: 25px;
+  color: var(--green);
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.contact-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 43%;
+  height: 100%;
+  background:
+    linear-gradient(90deg, #eaf4e2 0%, rgba(234,244,226,.2) 30%, rgba(234,244,226,0) 55%),
+    url("https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=1100&q=85")
+    center/cover no-repeat;
+}
+
+/* FOOTER */
+
+.site-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 86px;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  background: var(--green-deep);
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: .9rem;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .header-inner {
+    min-height: 74px;
+  }
+
+  .brand img {
+    width: clamp(115px, 17vw, 165px);
+    max-height: 60px;
+  }
+
+  .primary-nav {
+    gap: 22px;
+  }
+
+  .nav-link {
+    font-size: .92rem;
+  }
+
+  .hero {
+    min-height: 510px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.2rem, 8vw, 5.2rem);
+  }
+
+  .about {
+    gap: 42px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .contact-content {
+    width: 72%;
+  }
+
+  .contact-image {
+    width: 38%;
+    opacity: .8;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  html {
+    scroll-padding-top: 70px;
+  }
+
+  .page-width {
+    width: min(100% - 36px, 560px);
+  }
+
+  .header-inner {
+    width: calc(100% - 32px);
+    min-height: 68px;
+    gap: 10px;
+  }
+
+  /* MOBILE LOGO SIZE */
+
+  .brand {
+    max-width: 75%;
+  }
+
+  .brand img {
+    width: clamp(125px, 38vw, 170px);
+    max-height: 52px;
+    object-fit: contain;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 1002;
+    flex-shrink: 0;
+  }
+
+  .primary-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 22px 18px;
+    background: #fff;
+    box-shadow: 0 12px 18px rgba(0,0,0,.08);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: .2s ease;
+  }
+
+  .primary-nav.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    padding: 13px 4px;
+    border-bottom: 1px solid #edf1eb;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-link.active {
+    color: var(--green);
+  }
+
+  .hero {
+    min-height: 590px;
+    align-items: flex-start;
+  }
+
+  .hero-photo {
+    background-position: 62% center;
+  }
+
+  .hero-shade {
+    background: linear-gradient(
+      90deg,
+      rgba(255,255,255,.96),
+      rgba(255,255,255,.83) 58%,
+      rgba(255,255,255,.25)
+    );
+  }
+
+  .hero-content {
+    padding-top: 88px;
+    padding-bottom: 110px;
+  }
+
+  .eyebrow {
+    font-size: .75rem;
+  }
+
+  .hero h1 {
+    max-width: 500px;
+    font-size: clamp(3.15rem, 13vw, 4.5rem);
+  }
+
+  .hero-subtitle {
+    max-width: 300px;
+    font-size: 1.05rem;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .hero-curve {
+    bottom: -78px;
+  }
+
+  .section {
+    padding-block: 58px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .about-copy {
+    order: 1;
+  }
+
+  .about-image-wrap {
+    order: 2;
+    margin: 0 8px;
+  }
+
+  .about-image-wrap img {
+    height: 270px;
+  }
+
+  .about h2 {
+    font-size: 3rem;
+  }
+
+  .products {
+    padding-top: 12px;
+  }
+
+  .section-heading {
+    margin-bottom: 26px;
+  }
+
+  .section-heading .section-kicker {
+    gap: 10px;
+    font-size: .82rem;
+  }
+
+  .section-kicker span {
+    width: 28px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+  }
+
+  .product-card {
+    padding: 7px 7px 14px;
+    border-radius: 14px;
+  }
+
+  .product-card img {
+    border-radius: 9px;
+    aspect-ratio: 1 / 1;
+  }
+
+  .product-card h3 {
+    margin-top: 11px;
+    font-size: 1rem;
+  }
+
+  .contact-section {
+    display: block;
+    min-height: 0;
+    margin-block: 12px 42px;
+    padding: 30px 24px 210px;
+    border-radius: 22px;
+  }
+
+  .contact-content {
+    width: 100%;
+  }
+
+  .contact-content h2 {
+    font-size: 2.15rem;
+  }
+
+  .contact-image {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 195px;
+    opacity: 1;
+    background-image:
+      linear-gradient(180deg, #eaf4e2 0%, rgba(234,244,226,.05) 40%),
+      url("https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=900&q=85");
+    background-position: center 55%;
+  }
+
+  .site-footer {
+    min-height: 76px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+  .page-width {
+    width: calc(100% - 28px);
+  }
+
+  .header-inner {
+    min-height: 64px;
+  }
+
+  .brand img {
+    width: 125px;
+    max-height: 45px;
+  }
+
+  .hero {
+    min-height: 540px;
+  }
+
+  .hero h1 {
+    font-size: 2.85rem;
+  }
+
+  .button {
+    min-height: 44px;
+    padding-inline: 19px;
+    font-size: .88rem;
+  }
+
+  .product-grid {
+    gap: 9px;
+  }
+
+  .product-card h3 {
+    font-size: .92rem;
+  }
+
+  .contact-content h2 {
+    font-size: 1.9rem;
+  }
+
+  .contact-list {
+    font-size: .95rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+
+    <a class="brand" href="#home" aria-label="Green Spice home">
+      <img src="images/logo.png" alt="Green Spice Logo">
+    </a>
+
+    <button class="menu-toggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="primary-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="primary-nav" id="primary-nav">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#products">Product</a>
+      <a class="nav-link" href="#gallery">Gallery</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-photo" role="img" aria-label="Colourful spices"></div>
+  <div class="hero-shade"></div>
+
+  <div class="hero-content page-width">
+    <p class="eyebrow">PURE • NATURAL • TRADITIONAL</p>
+
+    <h1>Freshness<br>in Every Spice</h1>
+
+    <p class="hero-subtitle">
+      Bringing the goodness of nature<br class="desktop-break">
+      to your kitchen.
+    </p>
+
+    <a class="button button-primary" href="#products">
+      Explore Our Products <span>→</span>
+    </a>
+  </div>
+
+  <div class="hero-curve"></div>
+</section>
+
+<section class="about section page-width" id="about">
+
+  <div class="about-copy">
+    <p class="section-kicker"><span></span> WHO WE ARE <span></span></p>
+
+    <h2>Green Spice</h2>
+
+    <p class="body-copy">
+      Green Spice brings you quality spices and natural ingredients,
+      carefully selected to add authentic flavour, freshness and
+      goodness to every meal.
+    </p>
+
+    <a class="button button-primary" href="#contact">
+      Learn More <span>→</span>
+    </a>
+  </div>
+
+  <div class="about-image-wrap">
+    <img src="images/about-img.jpg" alt="Green Spice products">
+  </div>
+
+</section>
+
+<section class="products section page-width" id="products">
+
+  <div class="section-heading">
+    <p class="section-kicker"><span></span> OUR PRODUCTS <span></span></p>
+    <h2>Nature's Finest Spices</h2>
+    <p>Carefully selected ingredients to bring rich flavour to every dish.</p>
+  </div>
+
+  <div class="product-grid">
+
+    <article class="product-card">
+      <img src="images/cardmom.png" alt="Cardamom">
+      <h3>Cardamom</h3>
+    </article>
+
+    <article class="product-card">
+      <img src="images/clove.png" alt="Clove">
+      <h3>Clove</h3>
+    </article>
+
+    <article class="product-card">
+      <img src="images/pepper.png" alt="Black Pepper">
+      <h3>Black Pepper</h3>
+    </article>
+
+    <article class="product-card">
+      <img src="images/star-anise.png" alt="Star Anise">
+      <h3>Star Anise</h3>
+    </article>
+
+    <article class="product-card">
+      <img src="images/cinnamon.png" alt="Cinnamon">
+      <h3>Cinnamon</h3>
+    </article>
+
+  </div>
+</section>
+
+<section class="products section page-width" id="gallery">
+
+  <div class="section-heading">
+    <p class="section-kicker"><span></span> GALLERY <span></span></p>
+    <h2>Nature's Finest Spices</h2>
+    <p>Carefully selected ingredients to bring rich flavour to every dish.</p>
+  </div>
+
+  <div class="product-grid">
+
+    <article class="product-card">
+      <img src="images/cardmom.png" alt="Cardamom">
+      <h3>Cardamom</h3>
+    </article>
+
+    <article class="product-card">
+      <img src="images/clove.png" alt="Clove">
+      <h3>Clove</h3>
+    </article>
+
+    <article class="product-card">
+      <img src="images/pepper.png" alt="Black Pepper">
+      <h3>Black Pepper</h3>
+    </article>
+
+    <article class="product-card">
+      <img src="images/star-anise.png" alt="Star Anise">
+      <h3>Star Anise</h3>
+    </article>
+
+    <article class="product-card">
+      <img src="images/cinnamon.png" alt="Cinnamon">
+      <h3>Cinnamon</h3>
+    </article>
+
+  </div>
+</section>
+
+<section class="contact-section page-width" id="contact">
+
+  <div class="contact-content">
+    <p class="contact-kicker">CONTACT US <span></span></p>
+
+    <h2>Let's connect with Green Spice</h2>
+
+    <div class="contact-list">
+
+      <a href="tel:+919876543210">
+        <span class="contact-icon">☎</span>
+        +91 98765 43210
+      </a>
+
+      <a href="mailto:info@greenspice.com">
+        <span class="contact-icon">✉</span>
+        info@greenspice.com
+      </a>
+
+      <p>
+        <span class="contact-icon">⌖</span>
+        Kerala, India
+      </p>
+
+    </div>
+  </div>
+
+  <div class="contact-image" role="img"
+    aria-label="Peppercorns and fresh green leaves">
+  </div>
+
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> Green Spice. All Rights Reserved.</p>
+</footer>
+
+<script>
+const menuButton = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".primary-nav");
+const navLinks = document.querySelectorAll(".nav-link");
+
+menuButton.addEventListener("click", () => {
+  const isOpen = nav.classList.toggle("open");
+
+  menuButton.setAttribute("aria-expanded", String(isOpen));
+
+  menuButton.setAttribute(
+    "aria-label",
+    isOpen ? "Close navigation menu" : "Open navigation menu"
+  );
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+
+    nav.classList.remove("open");
+
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Open navigation menu");
+
+    navLinks.forEach((item) => item.classList.remove("active"));
+
+    link.classList.add("active");
+  });
+});
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>
